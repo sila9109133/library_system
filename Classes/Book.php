@@ -1,8 +1,10 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/LibraryManagementSystem/utility/DBConn.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/LibrarySys/utility/DBConn.php';
+
 
     class Book{
         public $conn;
+        private $allowedRoles = ['admin', 'librarian','user'];
 
         public function __construct(){
             $db = new DBConn();
